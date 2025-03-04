@@ -54,4 +54,31 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-alert("funciona el script");
+
+
+// Mostrar/ocultar el formulario flotante
+const mostrarLogin = () => {
+    const fondoOscuro = document.getElementById('fondo-oscuro');
+    fondoOscuro.classList.toggle('visible');
+    document.querySelector('.section__formulario--log-in').classList.add('visible');
+    document.querySelector('.section__formulario--sign-up').classList.remove('visible');
+};
+
+// Cambiar entre formularios
+const cambiarFormulario = (action) => {
+    if (action === 'login') {
+        document.querySelector('.section__formulario--log-in').classList.add('visible');
+        document.querySelector('.section__formulario--sign-up').classList.remove('visible');
+    } else if (action === 'signup') {
+        document.querySelector('.section__formulario--sign-up').classList.add('visible');
+        document.querySelector('.section__formulario--log-in').classList.remove('visible');
+    }
+};
+
+// Cerrar el formulario al hacer clic fuera
+const fondoOscuro = document.getElementById('fondo-oscuro');
+fondoOscuro.addEventListener('click', (e) => {
+    if (e.target === fondoOscuro) {
+        fondoOscuro.classList.remove('visible');
+    }
+});
