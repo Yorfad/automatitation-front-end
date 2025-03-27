@@ -35,10 +35,6 @@
                 <button class="boton boton__formulario--cambiar" type="button" onclick="cambiarFormulario('login')">
                     Iniciar sesión
                 </button>
-
-                <button class="boton boton__formulario--cambiar" type="button" onclick="cambiarFormulario('login')">
-                    No iniciar secion
-                </button>
             </form>
         </section>
     </div>
